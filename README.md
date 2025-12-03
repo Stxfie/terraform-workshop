@@ -19,7 +19,7 @@ Where is HCP Terraform? -> [here](https://app.terraform.io)
   - What is my username? -> Should be your email address you gave us or the username you used during the HCP Terraform Sign Up process
   - What is my password? -> It's in your mind or in a password manager
 
-HCP Terraform has the notion of "Organizations". For this workshop an organization named 'TechXchangeNL' has been made and your HCP Terraform account should have access once you have accepted the invitation we have sent previously. Everything you do, will be done within that organisation.
+HCP Terraform has the notion of "Organizations". For this workshop an organization named 'TechXchangeNL' has been made and your HCP Terraform account should have access once you have accepted the invitation we have sent previously. Everything you do, will be done within that organization.
 
 This workshop has been designed such that **you** will need to do most of the work, signifying the word "work" in workshop 😉. 
 This means we only have the absolute basics set up and you need to build all the components to make everything work.
