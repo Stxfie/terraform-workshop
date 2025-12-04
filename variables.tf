@@ -22,6 +22,7 @@ variable "instance_name_prefix" {
   description = "Prefix for the name tag of EC2 instances (* Required)"
   type        = string
   nullable    = false
+  default     = "srw"
 }
 
 variable "instance_type" {
