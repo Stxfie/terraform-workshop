@@ -6,7 +6,7 @@ resource "aap_inventory" "srw_inventory" {
 
 resource "aap_group" "test_group" {
   inventory_id = aap_inventory.srw_inventory.id
-  name         = "var.tags.Role"
+  name         = var.tags.Role
 }
 
 resource "aap_host" "test_host" {
