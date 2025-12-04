@@ -12,10 +12,10 @@ resource "aap_group" "test_group" {
 resource "aap_host" "test_host" {
   for_each = { for idx, instance in aws_instance.web_server : idx => instance }
   inventory_id = aap_inventory.srw_inventory.id
-  name         = "each.value.tags.Name"
+  name         = each.value.tags.Name
   variables = jsonencode(
     {
-      "ansible_host" : "each.value.public_ip"
+      "ansible_host" : each.value.public_ip
     }
   )
   groups = [aap_group.test_group.id]
