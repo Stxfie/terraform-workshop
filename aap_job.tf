@@ -27,6 +27,6 @@ resource "aap_job" "deploy_website_job" {
   wait_for_completion_timeout_seconds = 180
 
   depends_on = [
-    aap_job.deploy_webserver
+    aap_job.deploy_webserver_job
   ]
 }
