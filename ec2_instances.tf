@@ -9,7 +9,7 @@ resource "aws_instance" "web_server" {
   depends_on = [aws_security_group.this]
   count                       = 1
   ami                         = data.aws_ami.rhel_10.id
-  instance_type               = "t3.large"
+  instance_type               = var.instance_type
   #subnet_id                   = local.subnet_id
   vpc_security_group_ids      = [aws_security_group.this.id]
   key_name                    = var.ssh_key_name
