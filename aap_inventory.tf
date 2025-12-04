@@ -10,7 +10,7 @@ resource "aap_group" "test_group" {
 }
 
 resource "aap_host" "test_host" {
-  for_each = [aws_instance.web_server]
+  for_each = { for idx, instance in aws_instance.web_server : idx => instance }
   inventory_id = aap_inventory.test_inventory.id
   name         = "each.value.tags.Name"
   variables = jsonencode(
