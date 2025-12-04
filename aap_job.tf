@@ -9,7 +9,7 @@ data "aap_job_template" "deploy_website" {
 }
 
 resource "aap_job" "deploy_webserver_job" {
-  job_template_id = aap_job_template.deploy_webserver.id
+  job_template_id = data.aap_job_template.deploy_webserver.id
   inventory_id    = aap_inventory.srw_inventory.id
   wait_for_completion = true
   wait_for_completion_timeout_seconds = 180
@@ -21,7 +21,7 @@ resource "aap_job" "deploy_webserver_job" {
 }
 
 resource "aap_job" "deploy_website_job" {
-  job_template_id = aap_job_template.deploy_website.id
+  job_template_id = data.aap_job_template.deploy_website.id
   inventory_id    = aap_inventory.srw_inventory.id
   wait_for_completion = true
   wait_for_completion_timeout_seconds = 180
